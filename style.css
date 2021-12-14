@@ -1,0 +1,24 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+.sec-list {
+    display: grid;
+    grid-template-areas:
+        'a b';
+    margin: 2rem;
+}
+
+.sec-list img {
+    width: 30rem;
+    grid-area: a;
+}
+
+.sec-list .card {
+    grid-area: b;
+}
