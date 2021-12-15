@@ -64,49 +64,59 @@ body {
 
 /*SLIDER*/
 .slider {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     margin: 0 auto 0;
     width: 80vw;
 }
 
 .slider img {
     margin: 0 auto 0;
-    display: block;
-    position: absolute;
+    position: relative;
     width: 80vw;
-
+    grid-area: 1 / 1 / 2 / 2;
 }
+
 
 .slider-img1 {
     animation: fade1 20s infinite;
+    z-index: 1;
 }
 
 .slider-img2 {
     animation: fade2 20s infinite;
+    z-index: 2;
 }
 
 .slider-img3 {
     animation: fade3 20s infinite;
+    z-index: 3;
 }
 
 .slider-img4 {
     animation: fade4 20s infinite;
+    z-index: 4;
 }
 
 .slider-img5 {
     animation: fade5 20s infinite;
+    z-index: 5;
 }
 
 .slider-img6 {
     animation: fade6 20s infinite;
+    z-index: 6;
 }
 
 .slider-img7 {
     animation: fade7 20s infinite;
+    z-index: 7;
 }
 
 .slider-img8 {
     animation: fade8 20s infinite;
+    z-index: 8;
 }
 
 @keyframes fade1 {
@@ -415,17 +425,18 @@ body {
 
 @media only screen and (max-width: 768px) {
     .slider {
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin: 0 auto 0;
+        width: 80vw;
     }
 
     .slider img {
-        display: block;
-        position: absolute;
-        width: 100vw;
-
+        margin: 0 auto 0;
+        position: relative;
+        width: 80vw;
+        grid-area: 1 / 1 / 2 / 2;
     }
 }
 
@@ -547,5 +558,42 @@ button:hover {
 @media only screen and (max-width: 768px) {
     .f-contact {
         width: 80vw;
+    }
+}
+
+/*FOOTER*/
+footer {
+    background-image: linear-gradient(to right, slateblue, slategrey);
+}
+
+footer div {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin: 1em auto 1em;
+}
+
+footer h1 {
+    text-align: center;
+    font-size: 5em;
+    text-shadow: .2em .2em black;
+}
+
+@media only screen and (max-width:768px) {
+    footer div {
+        display: flex;
+        justify-content: space-between;
+        width: 80vw;
+        margin: 1em auto 1em;
+    }
+
+    footer div a {
+        width: min-content;
+    }
+
+    footer h1 {
+        text-align: center;
+        font-size: 2em;
+        text-shadow: .2em .2em black;
     }
 }
